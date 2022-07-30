@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-<a href="#" class="mb-3 mt-3 btn btn-primary">ДОБАВИТЬ ОПРОС</a>
+<a href="{% url 'creates' %}" class="mb-3 mt-3 btn btn-primary">ДОБАВИТЬ ОПРОС</a>
     <h1 class="mb-3 mt-3">ОПРОСЫ:</h1>
 
     {% for poll in polls %}

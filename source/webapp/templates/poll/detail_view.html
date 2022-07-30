@@ -22,7 +22,7 @@
             </div>
         </div>
 {% endfor %}
-    <a href="#" class="btn btn-success">ДОБАВИТЬ ОТВЕТ</a>
-    <a href="#" class="btn btn-primary">РЕДАКТИРОВАТЬ ОТВЕТ</a>
+    <a href="{% url 'choice_add' poll.pk %}" class="btn btn-success">ДОБАВИТЬ ОТВЕТ</a>
+    <a href="{% url 'choice_update' poll.pk %}" class="btn btn-primary">РЕДАКТИРОВАТЬ ОТВЕТ</a>
     <a href="#" class="btn btn-secondary">УДАЛИТЬ ОТВЕТ</a>
 {% endblock %}

@@ -3,7 +3,7 @@ from django.urls import reverse, reverse_lazy
 from webapp.forms import PollForm
 from webapp.models import Poll
 
-from django.views.generic import ListView, DetailView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
 
 class IndexView(ListView):
@@ -40,3 +40,12 @@ class DeletesView(DeleteView):
     success_url = reverse_lazy('poll')
     model = Poll
     context_object_name = 'poll'
+
+
+class CreatesView(CreateView):
+    model = Poll
+    template_name = 'poll/create_view.html'
+    form_class = PollForm
+
+    def get_success_url(self):
+        return reverse('poll')

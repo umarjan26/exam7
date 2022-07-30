@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}СОЗДАТЬ ОПРОС{% endblock %}
+
+
+{% block menu %}
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="{% url 'poll' %}">НА ГЛАВНУЮ</a>
+    </nav>
+{% endblock %}
+
+
+{% block content %}
+    <h1>СОЗДАТЬ ОПРОС</h1>
+    <form method="POST" action="{% url 'creates' %}">
+        {% include 'partial/form.html' with button_text="Создать" %}
+    </form>
+{% endblock %}
