@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ poll.question }}{% endblock %}
+
+{% block menu %}
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="{% url 'index' %}">НА ГЛАВНУЮ</a>
+
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">{{ poll.question }}</h1>
+    <p class="text-center">Created at <b>{{ poll.created_at }}</b></p>
+
+
+{% for choice in poll.choice.all %}
+    <div class="card mb-5">
+            <div class="card-body">
+                <h2 class="card-title">{{ choice.text }}</h2>
+
+            </div>
+        </div>
+{% endfor %}
+    <a href="#" class="btn btn-success">ДОБАВИТЬ ОТВЕТ</a>
+    <a href="#" class="btn btn-primary">РЕДАКТИРОВАТЬ ОТВЕТ</a>
+    <a href="#" class="btn btn-secondary">УДАЛИТЬ ОТВЕТ</a>
+{% endblock %}
