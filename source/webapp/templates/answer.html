@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}
+Опрос {{ poll.pk }}
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="text-primary"> Опрос №{{ poll.id }}</h1>
+        </div>
+        <div class="">
+            <form method="post">
+            {% csrf_token %}
+            {% if poll.choice.all %}
+                {% for choices in poll.choice.all %}
+                    <div class="form-check">
+                        <input class="form-check-input" value="{{ choices.id }}" type="radio" name="answer">
+                        <label class="form-check-label">
+                            {{ choices.option }}
+                        </label>
+                    </div>
+                {% endfor %}
+            {% else %}
+            {% endif %}
+                <div>
+                    {% if poll.choices.all %}
+                        <input class="btn btn-primary w-100 mt-4" type="submit" value="Отправить">
+                    {% else %}
+                        <input class="btn btn-primary w-100 mt-4 disabled" type="submit" value="Отправить">
+                    {% endif %}
+                </div>
+                <a class="my-3 btn btn-danger w-100" href="{% url 'detail' poll.pk %}">Отмена</a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

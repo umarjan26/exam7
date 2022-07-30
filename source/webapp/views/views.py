@@ -15,7 +15,7 @@ class IndexView(ListView):
     paginate_orphans = 0
 
     def get_queryset(self):
-        return Poll.objects.all().order_by('-created_at')
+        return Poll.objects.all().order_by('-created_at',)
 
 
 class DetailsView(DetailView):
