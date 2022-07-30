@@ -18,3 +18,10 @@ class Choice(models.Model):
     poll = models.ForeignKey('webapp.Poll', related_name='choice', null=True, blank=False,
                                 on_delete=models.CASCADE, verbose_name='Опрос')
 
+
+    def __str__(self):
+        return self.text[:20]
+
+    class Meta:
+        verbose_name = 'Вариант ответа'
+        verbose_name_plural = 'Варианты ответа'
