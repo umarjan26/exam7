@@ -34,3 +34,9 @@ class UpdatesView(UpdateView):
         return reverse('detail', kwargs={'pk': self.object.pk})
 
 
+
+class DeletesView(DeleteView):
+    template_name = 'poll/delete_view.html'
+    success_url = reverse_lazy('poll')
+    model = Poll
+    context_object_name = 'poll'
