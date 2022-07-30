@@ -14,7 +14,7 @@
                 <h2 class="card-title">{{ poll.question }}</h2>
                 <p class="card-text">{{ poll.created_at }}</p>
                 <a href="{% url 'detail' poll.pk %}" class="btn btn-primary">ПРОСМОТРEТЬ</a>
-                <a href="#" class="btn btn-danger">РЕДАКТИРОВАТЬ</a>
+                <a href="{% url 'update' poll.pk %}" class="btn btn-danger">РЕДАКТИРОВАТЬ</a>
                 <a href="#" class="btn btn-secondary">УДАЛИТЬ</a>
                 <a href="#" class="btn btn-success">ПРОЙТИ ОПРОС</a>
             </div>

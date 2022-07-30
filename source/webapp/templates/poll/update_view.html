@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}РЕДАКТИРОВАНИЕ ОПРОСА{% endblock %}
+{% block menu %}
+
+{% endblock %}
+{% block content %}
+    <h1 class="text-danger">РЕДАКТИРОВАТЬ ОПРОС</h1>
+    <form method="POST" action="{% url "update" poll.pk %}">
+        {% include 'partial/form.html' with button_text="РЕДАКТИРОВАТЬ" %}
+    </form>
+{% endblock %}
