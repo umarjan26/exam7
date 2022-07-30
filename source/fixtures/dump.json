@@ -1,0 +1,218 @@
+[
+{
+    "model": "webapp.poll",
+    "pk": 2,
+    "fields": {
+        "question": "хёыш  трё с√ыр тючьюцэюёЄ№ ёЇюЄърЄ№ё  ёю чэрьхэшЄюёЄ№■ ъЄю с√ ¤Єю с√ы?",
+        "created_at": "2022-07-30T09:04:39.997Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 3,
+    "fields": {
+        "question": "т√схЁшЄш ьр°шэє ъюЄюЁр  трь эЁртшЄё ",
+        "created_at": "2022-07-30T12:16:50.973Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 7,
+    "fields": {
+        "question": "т√схЁшЄх юфхцфє ъюЄюЁр  трь эЁртшЄё ",
+        "created_at": "2022-07-30T14:14:37.667Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 8,
+    "fields": {
+        "question": "ъЄю ёрь√щ ыєў°шщ єўшЄхы№ яю python ?",
+        "created_at": "2022-07-30T14:15:24.222Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 9,
+    "fields": {
+        "question": "ъръє■ Єхїэшъє т√сшЁрхЄх?",
+        "created_at": "2022-07-30T15:27:55.934Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 10,
+    "fields": {
+        "question": "т ъръюь уюЁюфх т√ цштхЄх?",
+        "created_at": "2022-07-30T15:28:13.337Z"
+    }
+},
+{
+    "model": "webapp.poll",
+    "pk": 11,
+    "fields": {
+        "question": "ъръюх цштюЄэюх трь эЁртшЄё ?",
+        "created_at": "2022-07-30T15:28:32.131Z"
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 1,
+    "fields": {
+        "text": "─цхээшЇхЁ ╦юяхч",
+        "poll": 2
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 2,
+    "fields": {
+        "text": "╬яЁр ╙шэЇЁш",
+        "poll": 2
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 6,
+    "fields": {
+        "text": "bmw",
+        "poll": 3
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 7,
+    "fields": {
+        "text": "╩шЁшыы ├Ёхїютюфют",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 8,
+    "fields": {
+        "text": "├Ёхїютюфют ╩шЁшыы",
+        "poll": 8
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 9,
+    "fields": {
+        "text": "dior",
+        "poll": 7
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 10,
+    "fields": {
+        "text": "louis vuitton",
+        "poll": 7
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 11,
+    "fields": {
+        "text": "schanel",
+        "poll": 7
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 12,
+    "fields": {
+        "text": "mercedes",
+        "poll": 3
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 13,
+    "fields": {
+        "text": "audi",
+        "poll": 3
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 14,
+    "fields": {
+        "text": "reno",
+        "poll": 3
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 15,
+    "fields": {
+        "text": "ъю°ър",
+        "poll": 11
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 16,
+    "fields": {
+        "text": "ёюсрър",
+        "poll": 11
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 17,
+    "fields": {
+        "text": "яюяєурщ",
+        "poll": 11
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 18,
+    "fields": {
+        "text": "┴ш°ъхъ",
+        "poll": 10
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 19,
+    "fields": {
+        "text": "└ыьр-рЄр",
+        "poll": 10
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 20,
+    "fields": {
+        "text": "╠юёътр",
+        "poll": 10
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 21,
+    "fields": {
+        "text": "lg",
+        "poll": 9
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 22,
+    "fields": {
+        "text": "samsung",
+        "poll": 9
+    }
+},
+{
+    "model": "webapp.choice",
+    "pk": 23,
+    "fields": {
+        "text": "beko",
+        "poll": 9
+    }
+}
+]
