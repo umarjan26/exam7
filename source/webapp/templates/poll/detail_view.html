@@ -1,28 +1,30 @@
+
+
+
+
 {% extends 'base.html' %}
 
 {% block title %}{{ poll.question }}{% endblock %}
 
 {% block menu %}
     <nav class="navbar navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="{% url 'index' %}">НА ГЛАВНУЮ</a>
-
+        <a class="navbar-brand" href="{% url 'poll' %}">НА ГЛАВНУЮ</a>
     </nav>
 {% endblock %}
 
 {% block content %}
-    <h1 class="mb-5">{{ poll.question }}</h1>
+    <h1 class="mb-5 text-center">{{ poll.question }}</h1>
     <p class="text-center">Created at <b>{{ poll.created_at }}</b></p>
-
 
 {% for choice in poll.choice.all %}
     <div class="card mb-5">
             <div class="card-body">
                 <h2 class="card-title">{{ choice.text }}</h2>
-
+                <a href="{% url 'choice_update' choice.pk %}" class="btn btn-primary">РЕДАКТИРОВАТЬ ОТВЕТ</a>
+                <a href="{% url "choice_delete" choice.pk %}" class="btn btn-danger">УДАЛИТЬ ОТВЕТ</a>
             </div>
         </div>
 {% endfor %}
-    <a href="{% url 'choice_add' poll.pk %}" class="btn btn-success">ДОБАВИТЬ ОТВЕТ</a>
-    <a href="{% url 'choice_update' poll.pk %}" class="btn btn-primary">РЕДАКТИРОВАТЬ ОТВЕТ</a>
-    <a href="#" class="btn btn-secondary">УДАЛИТЬ ОТВЕТ</a>
+    <a href="{% url 'choice_add' poll.pk %}" class="btn btn-success mb-5">ДОБАВИТЬ ОТВЕТ</a>
+
 {% endblock %}

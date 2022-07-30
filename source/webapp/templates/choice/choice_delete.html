@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}УДАЛИТЬ ОТВЕТ{% endblock %}
+
+{% block menu %}
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+    </nav>
+{% endblock %}
+{% block content %}
+    <h1>Вы уверены, что хотите удалить задачу  {{ poll }}?</h1>
+    <form method="POST" action="{% url 'choice_delete' choice.pk %}" class="text-center">
+        {% csrf_token %}
+        <p class="d-grid gap-2 mt-5 mb-5"><input type="submit" value="ПОДТВЕРДИТЬ" class="btn btn-danger"></p>
+        <p class="d-grid gap-2"><a href="{% url 'poll' %}" class="btn btn-primary">ОТМЕНА</a></p>
+    </form>
+{% endblock %}
+
